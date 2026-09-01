@@ -1,0 +1,1019 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f5f0;
+    color: #171717;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+.intro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.tiny {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.intro h1 {
+    font-size: clamp(42px, 8vw, 90px);
+    line-height: 1;
+    font-weight: 500;
+}
+
+.intro h1 span {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+
+.intro p {
+    margin-top: 30px;
+    color: #777;
+    line-height: 1.8;
+}
+
+button {
+    border: none;
+    background: #171717;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 14px;
+    transition: transform 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+#main {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    max-width: 900px;
+    margin: auto;
+    padding: 160px 30px 120px;
+    position: relative;
+    z-index: 5;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #888;
+}
+
+.hero h2 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: .95;
+    margin: 30px 0;
+}
+
+.hero h2 i {
+    font-family: "Playfair Display", serif;
+}
+
+.hero-text {
+    max-width: 450px;
+    color: #777;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    max-width: 900px;
+    margin: auto;
+    padding: 120px 30px;
+    position: relative;
+    z-index: 5;
+}
+
+.number {
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: clamp(38px, 6vw, 70px);
+    font-weight: 500;
+}
+
+.subtitle {
+    color: #777;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    margin-top: 80px;
+}
+
+.memory {
+    width: 70%;
+    margin-bottom: 120px;
+}
+
+.memory.reverse {
+    margin-left: auto;
+}
+
+.date {
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.memory-photo {
+    height: 420px;
+    background: #e5e1d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.memory-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.memory h3 {
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+.memory p {
+    color: #777;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   BIRTHDAY STORY
+========================= */
+
+.birthday-story {
+    margin-top: 90px;
+}
+.birthday-memory {
+    width: 85%;
+    margin-bottom: 150px;
+
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 45px;
+
+    align-items: center;
+
+    opacity: 1;
+    transform: none;
+}
+
+.birthday-memory.birthday-right {
+    margin-left: auto;
+}
+
+
+/* TEXT */
+
+.birthday-info {
+    margin-bottom: 35px;
+}
+
+.birthday-date {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 12px;
+}
+
+.birthday-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(45px, 7vw, 75px);
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.birthday-info p {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 430px;
+}
+
+
+/* PHOTOS */
+
+.birthday-photos {
+    display: grid;
+    gap: 18px;
+    align-items: start;
+}
+
+.birthday-photos-four {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.birthday-photos-two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.birthday-photos-one {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+}
+
+
+/* IMAGE + VIDEO */
+
+.birthday-photos img,
+.birthday-photos video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    background: #e5e1d9;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* SINGLE PHOTO */
+
+.birthday-photos-one img {
+    height: 500px;
+}
+
+
+/* LITTLE VARIATION */
+
+.birthday-photos img:nth-child(2) {
+    transform: translateY(15px);
+}
+
+.birthday-photos img:nth-child(3) {
+    transform: translateY(-8px);
+}
+
+.birthday-photos img:nth-child(4) {
+    transform: translateY(12px);
+}
+
+
+/* =========================
+   THE EVIDENCE
+========================= */
+
+.evidence-gallery {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.evidence-photo {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.evidence-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.evidence-photo:nth-child(1) {
+    grid-column: span 2;
+}
+
+.evidence-photo:nth-child(2) {
+    grid-column: span 2;
+}
+
+.evidence-photo:nth-child(3) {
+    grid-column: span 2;
+}
+
+.evidence-photo:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.evidence-photo:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+
+/* =========================
+   LOVE
+========================= */
+
+.love-section {
+    text-align: center;
+}
+
+.love-envelopes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 55px;
+}
+
+.envelope {
+    width: 145px;
+    height: 115px;
+    margin: 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: white;
+    color: #171717;
+    border: 1px solid #e2dfd8;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.envelope:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.envelope-number {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.envelope-icon {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.envelope-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.love-text {
+    margin: 50px auto 0;
+    max-width: 600px;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    line-height: 1.7;
+    min-height: 120px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.love-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SONGS
+========================= */
+
+.songs {
+    margin-top: 50px;
+}
+
+.song {
+    padding: 25px 0;
+    border-bottom: 1px solid #ddd;
+
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+    align-items: start;
+}
+
+.song > span {
+    color: #999;
+}
+
+.song strong {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.song small {
+    display: block;
+    color: #888;
+    margin-top: 8px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FUTURE
+========================= */
+
+.future-list {
+    margin-top: 50px;
+}
+
+.future-list div {
+    background: white;
+    border: 1px solid #e5e2db;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.future-list div:hover {
+    transform: translateX(6px);
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-section {
+    min-height: 900px;
+    padding: 150px 30px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 5;
+}
+
+.final-section h2 {
+    font-size: clamp(45px, 7vw, 80px);
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+
+.final-message {
+    max-width: 650px;
+    margin-top: 25px;
+}
+
+.final-section p {
+    color: #777;
+    line-height: 1.9;
+    margin-top: 25px;
+}
+
+.final-message strong {
+    color: #171717;
+}
+
+.birthday-message-final {
+    max-width: 700px;
+    margin-top: 100px;
+    padding-top: 70px;
+    border-top: 1px solid #ddd;
+}
+
+.birthday-message-final h3 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.birthday-message-final p {
+    margin-top: 25px;
+}
+
+.english-ending {
+    margin-top: 45px !important;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+}
+
+.gift {
+    margin-top: 60px;
+}
+
+.gift-icon {
+    font-size: 60px;
+}
+
+.gift h3 {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    color: #999;
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =========================
+   BACKGROUND STICKERS
+========================= */
+
+.sticker-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.sticker {
+    position: absolute;
+
+    width: 120px;
+    height: 150px;
+
+    object-fit: cover;
+
+    background: white;
+    padding: 6px;
+
+    border: 1px solid #e5e2db;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    opacity: 0.88;
+
+    pointer-events: none;
+}
+
+.sticker:nth-child(3n) {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+.sticker:nth-child(4n) {
+    width: 120px;
+    height: 145px;
+    border-radius: 25px 8px 25px 8px;
+}
+
+.sticker:nth-child(5n) {
+    width: 135px;
+    height: 105px;
+    border-radius: 12px;
+}
+
+.sticker:nth-child(6n) {
+    width: 115px;
+    height: 145px;
+    border-radius: 8px 30px 8px 30px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .sticker {
+        width: 90px;
+        height: 115px;
+        padding: 4px;
+    }
+
+    .sticker:nth-child(3n) {
+        width: 95px;
+        height: 95px;
+    }
+
+    .sticker:nth-child(4n) {
+        width: 90px;
+        height: 110px;
+    }
+
+    .sticker:nth-child(5n) {
+        width: 100px;
+        height: 80px;
+    }
+
+    .sticker:nth-child(6n) {
+        width: 85px;
+        height: 110px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 120px 25px 100px;
+    }
+
+    .section {
+        padding: 90px 25px;
+    }
+
+    .memory {
+        width: 100%;
+    }
+
+    .memory.reverse {
+        margin-left: 0;
+    }
+
+    .memory-photo {
+        height: 300px;
+    }
+
+    .birthday-memory,
+    .birthday-memory.birthday-right {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 110px;
+    }
+
+    .birthday-info {
+        margin-bottom: 25px;
+    }
+
+    .birthday-info h3 {
+        font-size: 52px;
+    }
+
+    .birthday-info p {
+        font-size: 15px;
+    }
+
+    .birthday-photos-four,
+    .birthday-photos-two {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .birthday-photos img,
+    .birthday-photos video {
+        height: 220px;
+        border-radius: 14px;
+    }
+
+    .birthday-photos-one img {
+        height: 400px;
+    }
+
+    .evidence-gallery {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 45px;
+    }
+
+    .evidence-photo:nth-child(1),
+    .evidence-photo:nth-child(2),
+    .evidence-photo:nth-child(3),
+    .evidence-photo:nth-child(4),
+    .evidence-photo:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .evidence-photo img {
+        max-height: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .love-envelopes {
+        gap: 15px;
+    }
+
+    .envelope {
+        width: 135px;
+        height: 110px;
+    }
+
+    .love-text {
+        font-size: 21px;
+        padding: 0 10px;
+    }
+
+    .song {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .song strong {
+        font-size: 15px;
+    }
+
+    .final-section {
+        padding: 120px 25px;
+    }
+
+    .birthday-message-final {
+        margin-top: 75px;
+        padding-top: 55px;
+    }
+
+    /* =========================
+   MOBILE BACKGROUND PHOTOS
+========================= */
+
+.sticker {
+    width: 42px;
+    height: 55px;
+
+    padding: 2px;
+
+    opacity: 0.45;
+
+    border-radius: 7px;
+
+    /* Keep photos away from text */
+    pointer-events: none;
+}
+
+/* LEFT SIDE */
+
+.sticker[style*="left"] {
+    left: -18px !important;
+}
+
+/* RIGHT SIDE */
+
+.sticker[style*="right"] {
+    right: -18px !important;
+}
+/* =========================================
+   BIRTHDAY ARCHIVE
+========================================= */
+
+.birthday-story {
+    margin-top: 90px;
+}
+
+.birthday-memory {
+    width: 85%;
+    margin-bottom: 150px;
+
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 45px;
+
+    align-items: center;
+}
+
+.birthday-memory.birthday-right {
+    margin-left: auto;
+    grid-template-columns: 65% 35%;
+}
+
+.birthday-memory.birthday-right .birthday-info {
+    order: 2;
+}
+
+.birthday-memory.birthday-right .birthday-photos {
+    order: 1;
+}
+
+
+/* TEXT */
+
+.birthday-info {
+    padding: 10px;
+}
+
+.birthday-date {
+    display: block;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    color: #999;
+
+    margin-bottom: 18px;
+}
+
+.birthday-info h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 7vw, 78px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+.birthday-info p {
+    color: #777;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    max-width: 300px;
+}
+
+
+/* PHOTOS */
+
+.birthday-photos {
+    display: grid;
+    gap: 12px;
+
+    align-items: start;
+}
+
+.birthday-photos-four {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.birthday-photos-two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.birthday-photos-one {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+}
+
+
+/* IMAGES + VIDEO */
+
+.birthday-photos img,
+.birthday-photos video {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* 2025 SINGLE PHOTO */
+
+.birthday-photos-one img {
+    height: 420px;
+}
+
+
+/* SMALL PHOTO MOVEMENT */
+
+.birthday-photos img:nth-child(2) {
+    transform: translateY(12px);
+}
+
+.birthday-photos img:nth-child(3) {
+    transform: translateY(-6px);
+}
+
+.birthday-photos img:nth-child(4) {
+    transform: translateY(10px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+
+
+    .birthday-story {
+        margin-top: 60px;
+    }
+
+    .birthday-memory,
+    .birthday-memory.birthday-right {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 25px;
+
+        margin-left: 0;
+        margin-bottom: 100px;
+    }
+
+    .birthday-memory.birthday-right .birthday-info,
+    .birthday-memory.birthday-right .birthday-photos {
+        order: initial;
+    }
+
+    .birthday-info {
+        width: 100%;
+    }
+
+    .birthday-info h3 {
+        font-size: 55px;
+    }
+
+    .birthday-info p {
+        font-size: 15px;
+    }
+
+    .birthday-photos-four,
+    .birthday-photos-two {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .birthday-photos img,
+    .birthday-photos video {
+        height: 190px;
+        border-radius: 12px;
+    }
+
+    .birthday-photos-one img {
+        height: 380px;
+    }
+
+}
