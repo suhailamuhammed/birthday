@@ -107,7 +107,7 @@ function createStickers() {
 
 
         sticker.src =
-            `images/img.${imageNumber}.jpeg`;
+            `img.${imageNumber}.jpeg`;
 
         sticker.className =
             "sticker";
